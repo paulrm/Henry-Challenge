@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import { ImSearch } from "react-icons/im";
+import axios from "axios";
 
 let value = "";
 
@@ -11,7 +12,20 @@ const SerchBar = () => {
     // const dispatch = useDispatch();
 
     const handlerButton = (e) => {
-        console.log("VALOR 2 =", value)
+        console.log("VALOR 2 =", value);
+        
+        axios.get(`http://localhost:3000/api/search/${value}`)
+        .then((response) => {
+          console.log(response);
+        //   this.setState({
+        //     body: response.data.body,
+        //     title: response.data.title,
+        //   });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
     }
 
     const handlerSearch = (e) => {
