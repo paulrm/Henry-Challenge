@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { Component } from 'react';
 import SearchBar from '../src/Component/SearchBar/SearchBar.js';
@@ -26,7 +27,9 @@ componentWillMount() {
 render() {
     return (
   <Router>
+  <BrowserRouter>
   <Route path='/' render={()=> <SearchBar/>} />
+  </BrowserRouter>
   </Router>
     );
 }    
