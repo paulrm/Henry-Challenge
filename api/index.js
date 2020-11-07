@@ -6,8 +6,9 @@ const bodyParser = require('body-parser');
 const routes = require('./src/routes/index.js');
 
 const server = express();
-const port = process.env.PORT || 3000
+const port = (process.env.PORT || 3000)
 
+server.set('port' , port)
 
 server.use('/', routes);
 server.use(bodyParser.urlencoded({ extended: false}));

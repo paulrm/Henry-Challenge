@@ -37,7 +37,7 @@ server.get("/search/:q", (req, res) =>{
         console.log("site_id =" , bodyObject.site_id)
         console.log("Result =", bodyObject.results.length)
         // Reccorer BodyObject y elegir lo que me sirve y armar un nuevo string (cambiar de objeto a sting)
-          let ArrayFinal = []
+        let ArrayFinal = []
         for (i = 0; i < bodyObject.results.length; i++) {
          var NuevoProducto = {
 

@@ -1,7 +1,9 @@
 const { Router } = require('express');
+const server = require('./api.js');
 
 // Importamos la ruta 
 const apiRouter = require('./api.js');
+
 
 const router = Router();
 
