@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { Component } from 'react';
 import SearchBar from '../src/Component/SearchBar/SearchBar.js';
+import NavBar from '../src/Component/NavBar/NavBar'
 
 //ACTIONS
 import {mostrarProductos} from './actions/products.js'
@@ -28,7 +29,8 @@ render() {
     return (
   <Router>
   <BrowserRouter>
-  <Route path='/' render={()=> <SearchBar/>} />
+  <Route path='/' render={()=> <NavBar/>} />
+  {/* <Route path='/' render={()=> <SearchBar/>} /> */}
   </BrowserRouter>
   </Router>
     );

@@ -4,10 +4,11 @@ import { useDispatch} from 'react-redux';
 import {Button} from 'react-bootstrap';
 import { ImSearch } from "react-icons/im";
 import axios from "axios";
+import styles from './searchbar.module.css';
 
 let value = "";
 
-const SerchBar = () => {
+const SearchBar = () => {
 
     // const dispatch = useDispatch();
 
@@ -44,13 +45,13 @@ const SerchBar = () => {
 
     return (
 
-        <Link to={'/search'} >
-            <Button type="submit" variant="light" onClick={handlerButton}  ><ImSearch/></Button>
-            <input name="Search" id="Search" type="text" placeholder="Buscar productos"
+        <Link to={'/search'} className={styles.container} >
+            <Button type="submit" variant="light" className={styles.boton} onClick={handlerButton}  ><ImSearch/></Button>
+            <input className={styles.buscador} name="Search" id="Search" type="text" placeholder="Buscar productos"
                 onChange={handlerSearch} />
         </Link>
 
     )
 }
 
-export default SerchBar;
+export default SearchBar;
