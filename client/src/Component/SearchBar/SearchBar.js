@@ -5,6 +5,7 @@ import {Button} from 'react-bootstrap';
 import { ImSearch } from "react-icons/im";
 import axios from "axios";
 import styles from './searchbar.module.css';
+import {mostrarProductos} from '../../actions/products'
 
 let value = "";
 
@@ -36,11 +37,11 @@ const SearchBar = () => {
         console.log("VALOR ? =", value)
         // console.log("ELEMENTO =", elemento)
         
-        // if (value !== '') {
-        //     dispatch(mostrarBusqueda(e.target.value));
-        // }else {
-        // dispatch(mostrarProductos());
-        // }
+    //     if (value !== '') {
+    //         dispatch(mostrarProductos(e.target.value));
+    // //     }else {
+    // //     dispatch(mostrarProductos());
+    //     }
     }
 
     return (

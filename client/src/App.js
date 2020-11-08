@@ -4,6 +4,7 @@ import './App.css';
 import { Component } from 'react';
 import SearchBar from '../src/Component/SearchBar/SearchBar.js';
 import NavBar from '../src/Component/NavBar/NavBar'
+import Catalogo from '../src/Component/Catalogo/Catalogo'
 
 //ACTIONS
 import {mostrarProductos} from './actions/products.js'
@@ -31,6 +32,7 @@ render() {
   <BrowserRouter>
   <Route path='/' render={()=> <NavBar/>} />
   {/* <Route path='/' render={()=> <SearchBar/>} /> */}
+  <Route path='/' render={() => <Catalogo/>} />
   </BrowserRouter>
   </Router>
     );
