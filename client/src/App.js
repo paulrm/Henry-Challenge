@@ -16,15 +16,16 @@ constructor(props) {
   this.state = { apiResponse: "HOLA" };
 }
 
-callAPI() {
-  fetch("http://localhost:3000/api/search")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }));
-}
 
-componentWillMount() {
-  this.callAPI();
-}
+// callAPI() {
+//   fetch(`http://localhost:3000/api/search/${value}`)
+//       .then(res => res.text())
+//       .then(res => this.setState({ apiResponse: res }));
+// }
+
+// componentWillMount() {
+//   this.callAPI();
+// }
 
 render() {
     return (
